@@ -1,0 +1,20 @@
+.navbar {
+    height: 80px;
+    width: 100%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.tab {
+    user-select: none;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    transition: all .2s;
+    cursor: pointer;
+    color: var(--text);
+    text-decoration: none;
+}
+.tab:hover {
+    background: var(--accent-light);
+}
