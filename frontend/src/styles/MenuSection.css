@@ -11,6 +11,9 @@
 }
 .section-contents {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 .section-title {
     display: flex;

@@ -44,7 +44,7 @@ const IconCode = () => {
         },
         {
             name: "Crustáceos",
-            src: "../src/assets/crab.png"
+            src: "../src/assets/crustacean.png"
         },
         {
             name: "Lácteos",

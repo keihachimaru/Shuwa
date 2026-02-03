@@ -8,6 +8,11 @@ type Props = {
 const MenuItem = ({ data }: Props) => {
     return (
         <div className="menu-item">
+            { data.emphasis.length>0 &&
+                <div className="emphasis">
+                    { data.emphasis }
+                </div>
+            }
             <div className="menu-title">
                 <span className="item-name">
                     { data.nombre }
@@ -19,6 +24,27 @@ const MenuItem = ({ data }: Props) => {
             </div>
             <div className="menu-description">
                 { data.descripción }
+            </div>
+            <div className="menu-row">
+                <div className="menu-notes">
+                    {
+                        data.notas.map(n => (
+                            <div className="menu-note" key={n}>
+                                { n }
+                            </div>                        
+                        ))
+                    }
+                </div>
+                <div className="menu-icons">
+                    {
+                        data.icons.map(icon => (
+                            icon.length>0&&<img 
+                                key={icon}
+                                className="menu-icon"
+                                src={`../src/assets/${icon}.png`}/>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

@@ -8,6 +8,18 @@
     margin: 10px;
     margin-top: 0px;
     margin-bottom: 0px;
+    position: relative;
+}
+.menu-item:has(.emphasis) {
+    margin-top: 20px;
+}
+.emphasis {
+    position: absolute;
+    transform: rotate(-30deg);
+    top: -15px;
+    left: -20px;
+    font-weight: bold;
+    color: #ff72c9;
 }
 .menu-title {
     display: flex;
@@ -26,4 +38,29 @@
 }
 .menu-description {
     font-size: .8em;
+}
+.menu-row {
+    display: flex;
+    align-items: center;
+}
+.menu-notes {
+    flex: 1;
+    padding-left: 10px;
+    color: var(--color-accent);
+}
+.menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+    padding: 3px 3px 3px 3px;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+.menu-icon {
+    height: 20px;
+    width: 20px;
+}
+.menu-note {
+    font-size: .7em;
 }
