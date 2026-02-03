@@ -1,0 +1,40 @@
+.menu-section {
+    margin: 5px;
+    width: calc(100% - 10px);
+    border-radius: 10px;
+    padding: 3px 5px 3px 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+.section-contents {
+    width: 100%;
+}
+.section-title {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+.detail {
+    font-size: .8em;
+    font-style: italic;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    color:#B8743A;
+}
+.accented {
+    border: 3px double;
+    border-color: #B8743A;
+    border-radius: 0;
+    overflow: hidden;
+}
