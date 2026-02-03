@@ -5,6 +5,8 @@ export type Item = {
     foto: string,
     seccion: string,
     notas: string[],
+    emphasis: string,
+    icons: string[],
 }
 
 export type Row = {
@@ -14,4 +16,6 @@ export type Row = {
     Foto: string,
     Sección: string,
     Notas: string,
+    Emphasis: string,
+    Icons: string,
 }

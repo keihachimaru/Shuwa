@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import IconCode from "@/components/IconCode";
 import MenuSection from "@/components/MenuSection";
 import Papa from "papaparse";
 import { useEffect, useState, useMemo } from "react";
@@ -36,7 +37,9 @@ const Menu = () => {
                         precio: d.Precio,
                         foto: d.Foto|| '',
                         seccion: d.Sección,
-                        notas: d.Notas.split('\n'),
+                        notas: d.Notas.split('\n').map(i => i.trim()),
+                        emphasis: d.Emphasis,
+                        icons: d.Icons.split(' ').map(i => i.trim())
                     })
                 );
                 setData(data);
@@ -69,6 +72,7 @@ const Menu = () => {
     return (
         <div className="menu">
             <Navbar/>
+            <IconCode/>
             {sections.map(section => (
                 <MenuSection
                     key={section}

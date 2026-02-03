@@ -1,0 +1,36 @@
+.icon-codes {
+    width: calc(100% );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.codes {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    width: 85%;
+    max-width: 600px;
+}
+.logo {
+    width: 100%;
+    max-width: 800px;
+}
+.icon-code {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.label {
+    font-size: .7em;
+    min-width: fit-content;
+    text-wrap: nowrap;
+}
+.icon {
+    width: 80%;
+    aspect-ratio: 1;
+}
