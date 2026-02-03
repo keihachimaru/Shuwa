@@ -1,33 +1,27 @@
 import Navbar from "@/components/Navbar";
+import MenuSection from "@/components/MenuSection";
 import Papa from "papaparse";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import type { Item, Row } from '@/types';
+import '@/styles/Menu.css';
 
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRTI7dYkDQH8Oyf1W4f_mxY97Z32RbUZdcnBzQXfCBld6xIiqHOEUvdJGpBFto2i5UvnRB2GRRvZTZP/pub?output=csv"
-
-type Item = {
-    nombre: string,
-    descripción: string,
-    precio: number,
-    foto: string,
-    seccion: string,
-    notas: string[],
-}
-
-type Row = {
-    Nombre: string,
-    Descripción: string,
-    Precio: number,
-    Foto: string,
-    Sección: string,
-    Notas: string,
-}
-
 
 const Menu = () => {
     const [data, setData] = useState<Item[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     
+    const items = useMemo(() => {
+        const sections = [ ...new Set(data.map(i => i.seccion))]
+        return Object.fromEntries(sections.map(s => ([
+            s,
+            data.filter(d => d.seccion===s)
+        ])))
+    }, [data])
+
+    const sections = useMemo(() => ([ ...new Set(data.map(i => i.seccion))]), [data])
+
     useEffect(() => {
         Papa.parse(CSV_URL, {
             download: true,
@@ -55,11 +49,34 @@ const Menu = () => {
         });
     }, []);
 
+    if(loading) {
+        return (
+            <>
+                <Navbar/>
+                Loading ...
+            </>
+        );
+    }
+    else if(error) {
+        return (
+            <>
+                <Navbar/>
+                Error!
+            </>
+        );
+    }
+
     return (
-        <>
+        <div className="menu">
             <Navbar/>
-            { JSON.stringify(data) }
-        </>
+            {sections.map(section => (
+                <MenuSection
+                    key={section}
+                    section={section}
+                    items={items[section]}
+                />
+            ))}
+        </div>
     )
 }
 export default Menu;

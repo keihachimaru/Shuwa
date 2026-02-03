@@ -11,10 +11,34 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary: #4285f4;
-  --accent: #611f1f;
-  --text: #fff;
-  --accent-light: #5f3737;
+
+  /* — Core Base Colors — */
+  --color-bg-primary: #faf7f4; /* soft off-white background */
+  --color-bg-secondary: #f2ebe4; /* slightly warmer secondary background */
+  --color-text-primary: #1f1f1f; /* main readable text */
+  --color-text-secondary: #4a4a4a; /* secondary text / descriptions */
+  --color-border: #ddd6ce; /* light neutral border line */
+
+  /* — Contrast & Depth — */
+  --color-bg-dark: #2a2a2a; /* dark section / footer backgrounds */
+  --color-text-light: #ffffff; /* light text on dark bg */
+
+  /* — Accent / Primary — */
+  --color-accent: #b33f3f; /* sake red accent — used for buttons & highlights */
+  --color-accent-light: #e8cfcf; /* lighter version of accent */
+
+  /* — Neutral / UI — */
+  --color-muted: #9e948d; /* muted text or disabled states */
+  --color-card-bg: #ffffff; /* cards, menus, popups */
+
+  /* — Availability / Status — */
+  --color-available: #3a7d44; /* green for “available” */
+  --color-unavailable: #c04b4b; /* red for “out of stock” */
+  --color-warning: #e0a030; /* warm yellow for subtle warnings */
+
+  /* — Interaction — */
+  --color-hover: #d7c7c0; /* hover / focus on card / menu item */
+  --color-button-text: #ffffff; /* primary button text */
 }
 
 body, html {
@@ -23,10 +47,10 @@ body, html {
   min-height: 100vh;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #fdf0e9;
   }
   a:hover {
     color: #747bff;

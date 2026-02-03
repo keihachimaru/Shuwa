@@ -1,0 +1,35 @@
+.menu-section {
+    margin: 5px;
+    width: calc(100% - 10px);
+    border-radius: 10px;
+    padding: 3px 5px 3px 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+}
+.section-title {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.detail {
+    font-size: .8em;
+    font-style: italic;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 5px;
+}
+.accented {
+    border: 3px double;
+    border-color: #B8743A;
+    border-radius: 0;
+    overflow: hidden;
+}
