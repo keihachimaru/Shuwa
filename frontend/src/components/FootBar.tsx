@@ -1,6 +1,6 @@
 import "@/styles/FootBar.css";
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
-import logo from "@/assets/shuwashuwa.png";
+import logo from "/public/shuwashuwa.png";
 
 const Footbar = () => {
   const socials = [

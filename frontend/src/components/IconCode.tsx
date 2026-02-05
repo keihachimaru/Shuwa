@@ -4,62 +4,62 @@ const IconCode = () => {
     const images = [
         {
             name: "Sésamo",
-            src: "../src/assets/sesame.png"
+            src: "/public/sesame.png"
         },
         {
             name: "Pescado",
-            src: "../src/assets/fish.png"
+            src: "/public/fish.png"
         },
         {
             name: "Huevo",
-            src: "../src/assets/egg.png"
+            src: "/public/egg.png"
         },
         {
             name: "Cacahuetes",
-            src: "../src/assets/peanut.png"
+            src: "/public/peanut.png"
         },
         {
             name: "Soja",
-            src: "../src/assets/soy-sauce.png"
+            src: "/public/soy-sauce.png"
         },
         {
             name: "Moluscos",
-            src: "../src/assets/mollusc.png"
+            src: "/public/mollusc.png"
         },
         {
             name: "Cacahuetes",
-            src: "../src/assets/gluten.png"
+            src: "/public/gluten.png"
         },
         {
             name: "Frutos secos",
-            src: "../src/assets/almond.png"
+            src: "/public/almond.png"
         },
         {
             name: "Sin gluten",
-            src: "../src/assets/gluten-free.png"
+            src: "/public/gluten-free.png"
         },
         {
             name: "Mostaza",
-            src: "../src/assets/mustard.png"
+            src: "/public/mustard.png"
         },
         {
             name: "Crustáceos",
-            src: "../src/assets/crustacean.png"
+            src: "/public/crustacean.png"
         },
         {
             name: "Lácteos",
-            src: "../src/assets/dairy.png"
+            src: "/public/dairy.png"
         },
         {
             name: "Vegetariano",
-            src: "../src/assets/vegetarian.png"
+            src: "/public/vegetarian.png"
         }
     ];
     return (
         <div className="icon-codes">
             <img 
                 className="logo"
-                src={"../src/assets/shuwashuwa.png"}
+                src={"/public/shuwashuwa.png"}
             />
             <div className="codes">
                 {images.map((i, idx) => (
