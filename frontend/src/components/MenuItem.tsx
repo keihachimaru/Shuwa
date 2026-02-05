@@ -35,7 +35,7 @@ const MenuItem = ({ data }: Props) => {
                         ))
                     }
                 </div>
-                <div className="menu-icons">
+                { data.icons[0]!='' && <div className="menu-icons">
                     {
                         data.icons.map(icon => (
                             icon.length>0&&<img 
@@ -44,7 +44,7 @@ const MenuItem = ({ data }: Props) => {
                                 src={`../src/assets/${icon}.png`}/>
                         ))
                     }
-                </div>
+                </div>}
             </div>
         </div>
     )

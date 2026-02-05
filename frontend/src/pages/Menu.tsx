@@ -111,14 +111,26 @@ const Menu = () => {
             <IconCode/>
             <QuickNav data={current} sections={sections}/>
             {sections.map(section => (
-                <MenuSection
-                    key={section}
-                    section={section}
-                    items={items[section]}
-                />
+                <>
+                    {
+                        section.toLocaleLowerCase().includes("wasake") &&
+                        <div className="sakes-container">
+                            <a 
+                                href="/sakes"
+                                className="sakes"
+                            >
+                                Consulta nuestra carta de saques!
+                            </a>
+                        </div>
+                    }
+                    <MenuSection
+                        key={section}
+                        section={section}
+                        items={items[section]}
+                    />
+                </>
             ))}
             <Footbar/>
-        </div>
-    )
+        </div>)
 }
 export default Menu;

@@ -7,3 +7,17 @@
     width: 100%;
     overflow: scroll;
 }
+.sakes {
+    color: var(--color-bg-primary);
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    background: var(--color-available);
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid var(--color-bg-primary);
+    outline: 4px solid var(--color-available)
+}
+.sakes-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
