@@ -41,7 +41,7 @@ const MenuItem = ({ data }: Props) => {
                             icon.length>0&&<img 
                                 key={icon}
                                 className="menu-icon"
-                                src={`../../public/${icon}.png`}/>
+                                src={`../src/assets/${icon}.png`}/>
                         ))
                     }
                 </div>}

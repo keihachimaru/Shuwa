@@ -4,62 +4,62 @@ const IconCode = () => {
     const images = [
         {
             name: "Sésamo",
-            src: "../../public/sesame.png"
+            src: "../src/assets/sesame.png"
         },
         {
             name: "Pescado",
-            src: "../../public/fish.png"
+            src: "../src/assets/fish.png"
         },
         {
             name: "Huevo",
-            src: "../../public/egg.png"
+            src: "../src/assets/egg.png"
         },
         {
             name: "Cacahuetes",
-            src: "../../public/peanut.png"
+            src: "../src/assets/peanut.png"
         },
         {
             name: "Soja",
-            src: "../../public/soy-sauce.png"
+            src: "../src/assets/soy-sauce.png"
         },
         {
             name: "Moluscos",
-            src: "../../public/mollusc.png"
+            src: "../src/assets/mollusc.png"
         },
         {
             name: "Cacahuetes",
-            src: "../../public/gluten.png"
+            src: "../src/assets/gluten.png"
         },
         {
             name: "Frutos secos",
-            src: "../../public/almond.png"
+            src: "../src/assets/almond.png"
         },
         {
             name: "Sin gluten",
-            src: "../../public/gluten-free.png"
+            src: "../src/assets/gluten-free.png"
         },
         {
             name: "Mostaza",
-            src: "../../public/mustard.png"
+            src: "../src/assets/mustard.png"
         },
         {
             name: "Crustáceos",
-            src: "../../public/crustacean.png"
+            src: "../src/assets/crustacean.png"
         },
         {
             name: "Lácteos",
-            src: "../../public/dairy.png"
+            src: "../src/assets/dairy.png"
         },
         {
             name: "Vegetariano",
-            src: "../../public/vegetarian.png"
+            src: "../src/assets/vegetarian.png"
         }
     ];
     return (
         <div className="icon-codes">
             <img 
                 className="logo"
-                src={"../../public/shuwashuwa.png"}
+                src={"../src/assets/shuwashuwa.png"}
             />
             <div className="codes">
                 {images.map((i, idx) => (
