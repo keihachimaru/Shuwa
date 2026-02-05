@@ -113,7 +113,7 @@ const Menu = () => {
             <IconCode/>
             <QuickNav data={current} sections={sections}/>
             {sections.map(section => (
-                <>
+                <div key={section}>
                     {
                         section.toLocaleLowerCase().includes("wasake") &&
                         <div className="sakes-container">
@@ -130,7 +130,7 @@ const Menu = () => {
                         section={section}
                         items={items[section]}
                     />
-                </>
+                </div>
             ))}
             <Footbar/>
         </div>)
