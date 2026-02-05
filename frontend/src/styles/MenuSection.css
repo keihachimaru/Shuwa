@@ -7,12 +7,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
+    max-width: 800px;
 }
 .section-contents {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
 }
 .section-title {
@@ -23,12 +24,12 @@
     margin-bottom: 10px;
 }
 .title {
-    font-size: 1.5em;
+    font-size: var(--text-size-b);
     font-weight: bold;
     color: var(--color-accent);
 }
 .detail {
-    font-size: .8em;
+    font-size: var(--text-size-s);
     font-style: italic;
     display: flex;
     align-items: flex-end;

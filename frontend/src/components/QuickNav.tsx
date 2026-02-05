@@ -40,6 +40,7 @@ const QuickNav = ({ data, sections } : Props) => {
                 {
                     sections.map(s => (
                         <div 
+                            key={s}
                             className={s==similar?"chip active": "chip"}
                         >
                         </div>

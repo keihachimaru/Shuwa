@@ -1,15 +1,15 @@
 .quickNav {
     position: fixed;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     backdrop-filter: blur(3px);
     background: linear-gradient(
         var(--color-bg-secondary),
         var(--color-bg-primary)
     );
-    z-index: 1;
+    z-index: 50;
 }
 .row {
     display: flex;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 .indicator {
-    padding: 5px;
+    padding: 5px 10px 5px 10px;
     display: flex;
     gap: 5px;
 }
@@ -43,12 +43,12 @@
     min-width: 50%;
 }
 .quickNav .title {
-    font-size: 1.5em;
+    font-size: var(--text-size-b);
     font-weight: bold;
     color: var(--color-accent);
 }
 .quickNav .detail {
-    font-size: .8em;
+    font-size: var(--text-size-s);
     font-style: italic;
     display: flex;
     align-items: flex-end;

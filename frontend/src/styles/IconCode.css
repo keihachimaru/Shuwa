@@ -5,20 +5,46 @@
     align-items: center;
     gap: 30px;
     padding-bottom: 20px;
-    padding-top: 20px;
-    height: calc(100vh - 100px);
-    justify-content: center;
+    height: calc(100vh - 80px);
+    justify-content: space-evenly;
+    overflow: hidden;
 }
 .codes {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    aspect-ratio: 1;
     gap: 10px;
-    width: 85%;
-    max-width: 600px;
+    max-height: 60%;
+    max-width: 500px;
+    max-width: 100%;
+}
+@media (max-width: 768px) {
+    .icon-codes {
+        height: calc(100vh - 60px);
+    }
+}
+@media (min-width: 768px) {
+    .icon-codes {
+        height: calc(100vh - 100px);
+    }
+    .codes {
+        height: 80%;
+    }
+    .label {
+        font-size: var(--text-size-s);
+    }
+}
+@media(min-width: 1000px) {
+    .codes {
+        grid-template-columns: auto auto auto auto auto;
+        width: 100%;
+        max-width: 800px;
+    }
 }
 .logo {
-    width: 100%;
     max-width: 800px;
+    max-width: 100%;
+    max-height: 30%;
 }
 .icon-code {
     overflow: hidden;
@@ -28,11 +54,11 @@
     gap: 5px;
 }
 .label {
-    font-size: .7em;
+    font-size: calc(var(--text-size-m)*.8);
     min-width: fit-content;
     text-wrap: nowrap;
 }
 .icon {
-    width: 80%;
+    height: calc(100% - var(--text-size-m)*2);
     aspect-ratio: 1;
 }

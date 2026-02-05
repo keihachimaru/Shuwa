@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Footbar from "@/components/FootBar";
 import IconCode from "@/components/IconCode";
 import QuickNav from "@/components/QuickNav";
 import Papa from "papaparse";
@@ -116,6 +117,7 @@ const Menu = () => {
                     items={items[section]}
                 />
             ))}
+            <Footbar/>
         </div>
     )
 }

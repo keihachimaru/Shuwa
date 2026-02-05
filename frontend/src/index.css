@@ -39,12 +39,24 @@
   /* — Interaction — */
   --color-hover: #d7c7c0; /* hover / focus on card / menu item */
   --color-button-text: #ffffff; /* primary button text */
+
+  --text-size-m: 1em;
+  --text-size-s: .7em;
+  --text-size-b: 1.3em;
 }
 
 body, html {
   margin: 0;
   width: 100%;
   min-height: 100vh;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --text-size-m: 1.3em;
+    --text-size-s: 1em;
+    --text-size-b: 1.8em;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,4 +70,7 @@ body, html {
   button {
     background-color: transparent;
   }
+}
+::-webkit-scrollbar {
+  display: none;
 }

@@ -1,5 +1,7 @@
 import '@/styles/Navbar.css';
 import { useState } from 'react';
+import Logo from '@/components/Logo';
+import { IoMdMenu } from "react-icons/io";
 
 type Tab = {
     name: string,
@@ -38,21 +40,32 @@ const Navbar = () => {
         },
     ]);
 
-
+    const [open, setOpen] = useState(false);
 
     return (
         <div className="navbar">
-            {
-                tabs.map((t: Tab) => (
-                    <a 
-                        className="tab"
-                        href={t.url}
-                        key={t.name}
-                    >
-                        { t.name }
-                    </a>
-                ))    
-            }
+            <Logo />
+            <button
+              className="hamburger"
+              onClick={() => setOpen(o => !o)}
+              aria-label="Toggle menu"
+            >
+                <IoMdMenu size={36} color={open?"var(--color-bg-primary)":"var(--color-text-primary)"}/>
+            </button>
+            <nav className={`nav-links ${open ? 'open' : ''}`}>                
+                {
+                    tabs.map((t: Tab) => (
+                        <a 
+                            className="tab"
+                            href={t.url}
+                            key={t.name}
+                        >
+                            { t.name }
+                        </a>
+                    ))    
+                }
+            </nav>
+            <div className={`background-image ${open ? 'visible' : ''}`}></div>
         </div>
     )
 }

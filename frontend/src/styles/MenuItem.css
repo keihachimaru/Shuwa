@@ -1,6 +1,6 @@
 .menu-item {
     width: calc(100% - 20px);
-    max-width: 500px;
+    max-width: 800px;
     min-height: 80px;
     display: flex;
     flex-direction: column;
@@ -15,9 +15,10 @@
 }
 .emphasis {
     position: absolute;
-    transform: rotate(-30deg);
-    top: -15px;
-    left: -20px;
+    transform: rotate(-20deg);
+    transform-origin: center center;
+    top: -20px;
+    left: -15px;
     font-weight: bold;
     color: #ff72c9;
 }
@@ -27,17 +28,18 @@
     justify-content: space-between;
 }
 .item-name {
-    font-size: 1.2em;
+    font-size: var(--text-size-b);
     font-weight: bold;
     max-width: 80%;
 }
 .item-price {
     font-family: 'Arial';
     font-style: italic;
-    font-size: .8em;
+    font-size: var(--text-size);
 }
 .menu-description {
-    font-size: .8em;
+    font-size: var(--text-size-s);
+    margin-left: 5px;
 }
 .menu-row {
     display: flex;
@@ -62,5 +64,5 @@
     width: 20px;
 }
 .menu-note {
-    font-size: .7em;
+    font-size: var(--text-size-s);
 }
