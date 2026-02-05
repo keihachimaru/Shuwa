@@ -7,6 +7,8 @@ import { useEffect, useState, useMemo } from "react";
 import type { Item, Row } from '@/types';
 import '@/styles/Menu.css';
 import MenuSection from "@/components/MenuSection";
+import Loading from "@/components/Loading";
+import DataError from "@/components/DataError";
 
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRTI7dYkDQH8Oyf1W4f_mxY97Z32RbUZdcnBzQXfCBld6xIiqHOEUvdJGpBFto2i5UvnRB2GRRvZTZP/pub?output=csv"
 
@@ -92,7 +94,7 @@ const Menu = () => {
         return (
             <>
                 <Navbar/>
-                Loading ...
+                <Loading/>
             </>
         );
     }
@@ -100,7 +102,7 @@ const Menu = () => {
         return (
             <>
                 <Navbar/>
-                Error!
+                <DataError/>
             </>
         );
     }
