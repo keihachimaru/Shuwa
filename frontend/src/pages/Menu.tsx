@@ -113,7 +113,7 @@ const Menu = () => {
             <IconCode/>
             <QuickNav data={current} sections={sections}/>
             {sections.map(section => (
-                <div key={section}>
+                <div key={section} style={{width: '100%'}}>
                     {
                         section.toLocaleLowerCase().includes("wasake") &&
                         <div className="sakes-container">
