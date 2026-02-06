@@ -9,7 +9,74 @@ import '@/styles/Menu.css';
 import MenuSection from "@/components/MenuSection";
 import Loading from "@/components/Loading";
 import DataError from "@/components/DataError";
+import sesameImg from '@/assets/sesame.png';
+import fishImg from '@/assets/fish.png';
+import eggImg from '@/assets/egg.png';
+import peanutImg from '@/assets/peanut.png';
+import soySauceImg from '@/assets/soy-sauce.png';
+import molluscImg from '@/assets/mollusc.png';
+import glutenImg from '@/assets/gluten.png';
+import almondImg from '@/assets/almond.png';
+import glutenFreeImg from '@/assets/gluten-free.png';
+import mustardImg from '@/assets/mustard.png';
+import crustaceanImg from '@/assets/crustacean.png';
+import dairyImg from '@/assets/dairy.png';
+import vegetarianImg from '@/assets/vegetarian.png';
 
+const images = [
+    {
+        name: "Sésamo",
+        src: sesameImg
+    },
+    {
+        name: "Pescado",
+        src: fishImg
+    },
+    {
+        name: "Huevo",
+        src: eggImg
+    },
+    {
+        name: "Cacahuetes",
+        src: peanutImg
+    },
+    {
+        name: "Soja",
+        src: soySauceImg
+    },
+    {
+        name: "Moluscos",
+        src: molluscImg
+    },
+    {
+        name: "Cacahuetes",
+        src: glutenImg
+    },
+    {
+        name: "Frutos secos",
+        src: almondImg
+    },
+    {
+        name: "Sin gluten",
+        src: glutenFreeImg
+    },
+    {
+        name: "Mostaza",
+        src: mustardImg
+    },
+    {
+        name: "Crustáceos",
+        src: crustaceanImg
+    },
+    {
+        name: "Lácteos",
+        src: dairyImg
+    },
+    {
+        name: "Vegetariano",
+        src: vegetarianImg
+    }
+]
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRTI7dYkDQH8Oyf1W4f_mxY97Z32RbUZdcnBzQXfCBld6xIiqHOEUvdJGpBFto2i5UvnRB2GRRvZTZP/pub?output=csv"
 
 const Menu = () => {
@@ -44,7 +111,7 @@ const Menu = () => {
                         seccion: d.Sección,
                         notas: d.Notas.split('\n').map(i => i.trim()),
                         emphasis: d.Emphasis,
-                        icons: d.Icons.split(' ').map(i => i.trim())
+                        icons: d.Icons.split(' ').map(i => i?images.find(img => img.name ===i.trim())?.src:'') as string[],
                     })
                 );
                 setData(data);
