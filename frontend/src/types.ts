@@ -6,7 +6,7 @@ export type Item = {
     seccion: string,
     notas: string[],
     emphasis: string,
-    icons: string[],
+    icons: (string | undefined)[],
 }
 
 export type Row = {

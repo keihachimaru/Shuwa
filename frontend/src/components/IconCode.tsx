@@ -41,7 +41,7 @@ const IconCode = () => {
             src: molluscImg
         },
         {
-            name: "Cacahuetes",
+            name: "Gluten",
             src: glutenImg
         },
         {

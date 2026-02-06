@@ -35,10 +35,10 @@ const MenuItem = ({ data }: Props) => {
                         ))
                     }
                 </div>
-                { data.icons[0]!='' && <div className="menu-icons">
+                { data.icons.length && <div className="menu-icons">
                     {
                         data.icons.map(icon => (
-                            icon.length>0&&<img 
+                            icon?.length&&<img 
                                 key={icon}
                                 className="menu-icon"
                                 src={`${icon}`}/>

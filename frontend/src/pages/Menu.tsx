@@ -25,55 +25,55 @@ import vegetarianImg from '@/assets/vegetarian.png';
 
 const images = [
     {
-        name: "Sésamo",
+        name: "sesame",
         src: sesameImg
     },
     {
-        name: "Pescado",
+        name: "fish",
         src: fishImg
     },
     {
-        name: "Huevo",
+        name: "egg",
         src: eggImg
     },
     {
-        name: "Cacahuetes",
+        name: "peanut",
         src: peanutImg
     },
     {
-        name: "Soja",
+        name: "soy",
         src: soySauceImg
     },
     {
-        name: "Moluscos",
+        name: "mollusc",
         src: molluscImg
     },
     {
-        name: "Cacahuetes",
+        name: "gluten",
         src: glutenImg
     },
     {
-        name: "Frutos secos",
+        name: "almond",
         src: almondImg
     },
     {
-        name: "Sin gluten",
+        name: "gluten-free",
         src: glutenFreeImg
     },
     {
-        name: "Mostaza",
+        name: "mustard",
         src: mustardImg
     },
     {
-        name: "Crustáceos",
+        name: "crustacean",
         src: crustaceanImg
     },
     {
-        name: "Lácteos",
+        name: "dairy",
         src: dairyImg
     },
     {
-        name: "Vegetariano",
+        name: "vegetarian",
         src: vegetarianImg
     }
 ]
@@ -111,7 +111,7 @@ const Menu = () => {
                         seccion: d.Sección,
                         notas: d.Notas.split('\n').map(i => i.trim()),
                         emphasis: d.Emphasis,
-                        icons: d.Icons.split(' ').map(i => i?images.find(img => img.name ===i.trim())?.src:'') as string[],
+                        icons: d.Icons.split(' ').map(i => i?images.find(img => img.name ===i.trim())?.src:''),
                     })
                 );
                 setData(data);
