@@ -56,9 +56,14 @@
     color:#B8743A;
 }
 .quickNav button {
-    height: 24px;
-    width: 24px;
-    border: none;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0px;
+}
+.quickNav svg {
+    flex-shrink: 0;
 }

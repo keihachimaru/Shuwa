@@ -50,7 +50,7 @@ const QuickNav = ({ data, sections } : Props) => {
             <div className="row">
                 <button onClick={() => goPrev()}>
                     <FaCaretLeft 
-                        size={32} 
+                        size={48} 
                         color={idx>0?"var(--color-accent)":"transparent"}>
                     </FaCaretLeft>
                 </button>
@@ -70,7 +70,7 @@ const QuickNav = ({ data, sections } : Props) => {
                 </div>
                 <button onClick={() => goNext()}>
                     <FaCaretRight 
-                        size={32} 
+                        size={48} 
                         color={idx<sections.length-1?"var(--color-accent)":"transparent"}>
                     </FaCaretRight>
                 </button>
