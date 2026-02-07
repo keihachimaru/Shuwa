@@ -35,10 +35,10 @@
 .item-price {
     font-family: 'Arial';
     font-style: italic;
-    font-size: var(--text-size);
+    font-size: var(--text-size-m);
 }
 .menu-description {
-    font-size: var(--text-size-s);
+    font-size: var(--text-size-m);
     margin-left: 5px;
 }
 .menu-row {
